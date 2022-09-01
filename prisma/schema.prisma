@@ -15,7 +15,6 @@ model User{
   id Int @id @default(autoincrement())
   email String @unique                  //we want the email to be unique
   username String 
-  age Int
   tweets Tweet[]
 
 }
@@ -28,4 +27,3 @@ model Tweet{
   userId Int
   user User @relation(fields: [userId], references: [id])
 }
-

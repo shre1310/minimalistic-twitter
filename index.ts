@@ -6,7 +6,7 @@ async function main() {
     //new user created
 const newUser = await prisma.user.create({
     data:{
-    email  : "heya@codefirst.io",
+    email  : "heya@code.io",
     username: "cashreap",
     
 },
@@ -21,7 +21,7 @@ const firstTweet = await prisma.tweet.create({
         userId: newUser.id,
     },
 });
-console.log("Fisrt tweet");
+console.log("First tweet");
 console.log(firstTweet);
 
 //fetch the new user using its unique email address
@@ -43,4 +43,4 @@ main()
 })
 .finally(async ()=> {
     await prisma.$disconnect();
-})
+});
