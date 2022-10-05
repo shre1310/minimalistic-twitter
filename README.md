@@ -1,0 +1,2 @@
+# minimalistic-twitter
+#learning prisma
